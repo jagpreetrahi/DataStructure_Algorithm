@@ -9,10 +9,10 @@ std::vector<int>   printDigit(int number){
     while(number > 0){
         int last = number%10;
         // vec.push_back(last);
-        vec.insert(vec.begin() , last); 
+        vec.insert(vec.begin() , last); // inserting at the beginning -> less efficient
         number /= 10;
     }
-    // std::reverse(vec.begin() , vec.end());
+     reverse(vec.begin() , vec.end()); // reverse after collection -> more efficient
     return vec;
 }
 
