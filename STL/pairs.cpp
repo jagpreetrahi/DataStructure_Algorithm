@@ -1,44 +1,21 @@
 #include <iostream>
+
 using namespace std;
-
-void printPair(){
-
-}
 
 
 int main(){
 
-    pair<int , string> p;
-    // two ways to initialize the pairs
-    // p = make_pair(2 , "avdf");   first way
-    p = {3, "dsfj"};   // second way
-    pair <int , string> &p1 = p;
-
-    p1 = {4, "SFJ"};
-
-    cout << p1.first << " " << p1.second<<endl;
-    cout << p.first << " " << p.second<<endl;
-
-    // array of pairs
-
-    pair<int , int> p_array[1];
-    p_array[0];
+    pair<int , int> p[3];
+    p[0] = {3,6};
+    p[1] = {4, 7};
+    p[2] = {4, 6};
     
-   
-//    swap(p_array[0] , p_array[2]);
-    // for(int i = 0; i<3 ; i++){
-    //       cout<<p_array[i].first <<" "<< p_array[i].second <<endl;
-    // }
-
-    for(int i = 0; i< 1; i++){
-        int x , y;
-        cin >> x >> y;
-        p_array[i]  = {x , y};
-    }
-
-    for(int i = 0; i< 1; i++){
-        cout<<p_array[i].first <<" "<<p_array[i].second <<endl;
-    }
 
 
+    swap(p[0], p[2]);
+
+    cout << p[0].first << " "<< p[0].second <<endl;
+
+
+    return 0;
 }
